@@ -166,7 +166,7 @@ bundle exec jekyll serve --livereload
 bundle exec jekyll build
 ```
 
-GitHub Pages에서는 **Settings → Pages**에서 기본 브랜치의 `/(root)`를 배포 대상으로 선택합니다. `url`과 `baseurl`을 실제 배포 형태에 맞게 설정한 뒤, 상대 URL을 만드는 Liquid 필터 `relative_url`을 유지합니다.
+GitHub Pages에서는 **Settings → Pages**에서 기본 브랜치의 `/(root)`를 배포 대상으로 선택합니다. `url`과 `baseurl`을 실제 배포 형태에 맞게 설정한 뒤, 상대 URL을 만드는 Liquid 필터 `relative_url`을 유지합니다. 스타일시트 URL에는 빌드 버전을 쿼리로 추가해, 배포 직후에도 브라우저가 이전 CSS를 재사용하지 않도록 합니다.
 
 ## 변경 전 점검표
 

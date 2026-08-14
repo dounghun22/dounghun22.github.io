@@ -13,6 +13,7 @@ Notion 원본을 옮길 때는 공개 가능한 경력, 학력, 프로젝트, �
 - Jekyll 기반 CV 생성·수정, Notion CV 마이그레이션, GitHub Pages 설정·배포 준비에는 `$build-jekyll-cv`를 사용합니다.
 - 공개 페이지 콘텐츠, 페이지 구성, 자산, 테마, 반응형을 변경하거나 빌드·배포를 준비할 때는 `$verify-cv-site-content`로 콘텐츠를 점검합니다.
 - 특허·논문 현행화 또는 신규 연구성과 추가에는 `$refresh-cv-research`를 사용합니다.
+- GitHub 커밋·push 또는 GitHub Pages 배포에는 `$publish-cv-to-github`을 사용합니다.
 
 ## 코딩 스타일과 명명 규칙
 

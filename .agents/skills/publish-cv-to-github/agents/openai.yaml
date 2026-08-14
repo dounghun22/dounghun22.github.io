@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub CV 배포"
+  short_description: "GitHub 배포 전 검사와 안전한 push 절차를 수행합니다."
+  default_prompt: "$publish-cv-to-github으로 검토 후 CV 사이트를 GitHub에 배포해줘."

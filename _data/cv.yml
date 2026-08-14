@@ -1,15 +1,48 @@
 name: Donghun Jeong
-role: Computer Architecture & Digital Logic Design Specialist
+role: Memory & Storage SoC IP RTL Design Engineer
 location: Seongnam-si, South Korea
 email: dounghun22@gmail.com
 summary: >-
-  Hello, I’m Donghun Jeong, a specialist in computer architecture and digital logic design.
-  I hold a master’s degree in computer architecture, where I focused on memory subsystems such
-  as GP-GPU memory compression and address translation techniques. Currently, I work at SK hynix,
-  designing SoCs for memory solution device controllers, leveraging my expertise to optimize system
-  performance and efficiency. I’ve also filed multiple patents based on innovative ideas in this field.
-  I excel in analyzing complex problems and developing cutting-edge solutions, and I’m passionate
-  about advancing technology in the semiconductor industry.
+  I am an engineer developing memory and storage solution SoCs, with a foundation in computer
+  architecture and digital logic design. During my master’s studies at Sungkyunkwan University, I
+  researched memory subsystems, including GP-GPU memory compression and address translation. I
+  currently design RTL for SoC IPs in SK hynix’s Solution Division. I excel at translating complex
+  system requirements into designs that balance performance, power, and reliability, and I continue
+  to create technical value through patent work in memory systems and data storage technologies.
+
+skills:
+  - label: Technical Knowledge
+    tone: knowledge
+    items:
+      - label: Computer Architecture
+        icon: architecture
+      - label: Memory Systems
+        icon: memory
+      - label: Digital Logic Design
+        icon: logic
+      - label: GP-GPU Architecture
+        icon: gpu
+      - label: Memory Compression
+        icon: compression
+      - label: Address Translation
+        icon: address-translation
+  - label: Design & Analysis Skills
+    tone: design
+    items:
+      - label: SoC IP RTL Design
+        icon: rtl
+      - label: Verilog / SystemVerilog
+        icon: code
+      - label: cocotb
+        icon: verification
+      - label: Python
+        icon: code
+      - label: NumPy
+        icon: array
+      - label: Pandas
+        icon: data-analysis
+      - label: GPGPU-Sim
+        icon: simulation
 
 profiles:
   - label: GitHub
@@ -41,12 +74,11 @@ education:
 
 experience:
   - period: 2025 – Present
-    role: Associate Engineer / Memory & Storage Solution SoC Designer
+    role: Associate Engineer / Memory & Storage SoC IP RTL Design
     company: SK hynix Solution Division
     logo: sk-hynix-logo.png
     highlights:
-      - "2025–present: FTL IP design"
-      - "2025: CXL 3.x Type 3 device solution-part architecture and RTL design"
+      - "2025–present: SoC IP RTL design"
   - period: 2023 – 2024
     role: Junior Engineer / CXL Solution SoC Designer
     company: SK hynix Solution Division
@@ -57,7 +89,7 @@ experience:
 
 projects:
   - title: Development of CXL 3.x Type 3 Device Controller
-    period: 01/2024 – 2025 · SK hynix
+    period: 01/2024 – 08/2025 · SK hynix
     description: Responsible for the architecture design and RTL implementation of the solution part, including custom and RAS features, in CXL controllers.
     contributions:
       - Designed optimized architecture for customer-specific features.
@@ -108,7 +140,7 @@ patents:
     status: Unpublished
     is_public: false
     is_registered: false
-    filing_date: "2025-05-19"
+    filing_date: "2025-07-29"
     kr_number: KR 10-2025-0064294
     us_number: US 19/284012
     contribution: 100% Contribution
@@ -116,12 +148,12 @@ patents:
     status: Published · Under Examination
     is_public: true
     is_registered: false
-    filing_date: "2025-01-04"
+    filing_date: "2025-04-01"
     publication_date: "2026-05-28"
     kr_number: KR 10-2024-0169278
     us_number: US 19/097420
     contribution: 60% Contribution
-    abstract: A data storage device caches compressed user data and tag data in volatile memory to improve caching-operation performance while avoiding extra storage space and accesses.
+    abstract: A data storage device includes volatile and nonvolatile memory, providing caching by storing cache lines containing compressed user data and tag data in volatile memory. This avoids additional volatile-memory storage and accesses for caching and improves caching-operation performance.
     link_label: Google Scholar record
     url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=s6U2-TMAAAAJ&citation_for_view=s6U2-TMAAAAJ:WF5omc3nYNoC
   - title: CONTROL DEVICE, MEMORY DEVICE AND MEMORY SYSTEM
@@ -133,7 +165,7 @@ patents:
     us_number: US 19/000864
     contribution: 40% Contribution
     publication_number: US 20260056658 A1
-    abstract: Compresses data in predetermined units using repeat and non-repeat sequences to enable parallel compression and decompression, improving memory-space efficiency while reducing latency.
+    abstract: Data stored in memory is compressed in predetermined-size units. The compressed format uses only sequences containing non-repetitive and repetitive portions, enabling parallel compression and decompression, efficient storage use, and reduced operation latency.
     url: https://patents.google.com/patent/US20260056658A1/en
   - title: STORAGE DEVICE SUPPORTING SPECULATIVE READ OPERATION
     status: Published · Under Examination
@@ -144,7 +176,7 @@ patents:
     us_number: US 18/977,949
     contribution: 30% Contribution
     publication_number: US 20260037129 A1
-    abstract: Uses a read buffer and residual-time information to retain data from speculative reads and return linked data to subsequent host read requests.
+    abstract: A memory system receives data from at least one memory device in response to a speculative read request, stores the data in a read buffer using residual-time information, and outputs data linked to a subsequent host read request.
     url: https://patents.google.com/patent/US20260037129A1/en
   - title: CONTROL DEVICE AND MEMORY SYSTEM
     status: US Granted
@@ -157,7 +189,7 @@ patents:
     us_number: US 12,704,958 (granted) · US 18/928,043 (application)
     contribution: 80% Contribution
     publication_number: US 20260003499 A1
-    abstract: Manages free physical storage regions using a free buffer and service queue to reduce memory-access delay during allocation and return.
+    abstract: Manages free physical storage regions by adding a free buffer to a service queue that handles allocation and return requests, reducing memory-access delay and improving memory-operation performance.
     url: https://patents.google.com/patent/US20260003499A1/en
   - title: CONTROLLER, MEMORY DEVICE AND MEMORY SYSTEM
     status: Published · Under Examination
@@ -168,19 +200,19 @@ patents:
     us_number: US 18/924,855
     contribution: 10% Contribution
     publication_number: US 20250383961 A1
-    abstract: Distributes command-data processing across at least two memory banks, reducing error-data bits and enabling correction with smaller parity.
+    abstract: Processes command data by operating at least two memory banks. Distributing bank operations reduces the number of bits provided by a bank with an error, enabling correction with smaller parity.
     url: https://patents.google.com/patent/US20250383961A1/en
   - title: METHOD AND APPARATUS FOR MANAGING VIRTUAL MEMORY IN HETEROGENEOUS SYSTEM, AND STORAGE MEDIUM STORING INSTRUCTIONS TO PERFORM METHOD FOR MANAGING VIRTUAL MEMORY
     status: KR Granted · US Under Examination
     is_public: true
     is_registered: true
-    filing_date: "2022-12-05"
+    filing_date: "2023-12-05"
     registration_date: "2025-12-09"
     kr_number: KR 10-2899852
     us_number: US 18/529,534 (filing)
     contribution: 25% Contribution
     publication_number: KR 10-2899852 B1 · US 20240184713 A1
-    abstract: Uses an inverted page table in device memory to identify a migration destination and migrate requested pages to system memory in a heterogeneous system.
+    abstract: In response to a page-access request in a heterogeneous system, determines a physical address in device memory and, when it indicates system memory, uses an inverted page table in device memory to generate a migration-destination frame identification and perform page migration to system memory.
     url: https://patents.google.com/patent/KR102899852B1/en
 
 papers:

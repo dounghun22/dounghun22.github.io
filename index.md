@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Donghun Jeong | Computer Architecture & Digital Logic Design"
-description: "Donghun Jeong's experience in computer architecture, digital logic design, and CXL SoC development."
+title: "Donghun Jeong | Memory & Storage SoC IP RTL Design"
+description: "Donghun Jeong's experience in computer architecture, digital logic design, and memory and storage SoC IP RTL design."
 lang: en
 alternate_url: /ko/
 alternate_label: 한국어

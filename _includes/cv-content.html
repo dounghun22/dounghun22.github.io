@@ -35,6 +35,23 @@
     <p class="summary">{{ cv.summary }}</p>
   </section>
 
+  <section class="cv-section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading"><span class="section-heading__icon">{% include icon.html name='skills' %}</span>{{ t.skills }}</h2>
+    <div class="section-rule"></div>
+    <div class="skill-list">
+      {% for group in cv.skills %}
+        <article class="skill-group skill-group--{{ group.tone }}">
+          <h3>{{ group.label }}</h3>
+          <ul>
+            {% for item in group.items %}
+              <li><span class="skill-group__icon">{% include icon.html name=item.icon %}</span><span>{{ item.label }}</span></li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
   <section class="cv-section" aria-labelledby="education-heading">
     <h2 id="education-heading"><span class="section-heading__icon">{% include icon.html name='education' %}</span>{{ t.education }}</h2>
     <div class="section-rule"></div>

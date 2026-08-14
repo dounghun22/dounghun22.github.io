@@ -41,6 +41,14 @@
 
 영문은 기본 경로 `/`, 한국어는 `/ko/`로 제공됩니다. 각 페이지 우측 상단의 언어 전환 링크는 대응하는 페이지로 이동합니다. 새 언어를 추가할 때는 해당 CV 데이터 파일, `_data/translations.yml`의 번역 키, 페이지 front matter의 `lang`·`alternate_*` 값을 함께 추가합니다.
 
+### 영문·한국어 의미 일치
+
+영문과 한국어를 함께 수정할 때는 두 언어의 대응 항목이 같은 사실과 성과를 전달하는지 확인합니다. 이름, 소속, 역할, 날짜, 수치, 특허 번호, DOI, 링크, 공개 여부는 두 언어에서 동일해야 하며, 한쪽에만 경력·성과·설명을 추가하거나 생략하지 않습니다.
+
+자연스러운 현지화는 허용하지만 의미를 넓히거나 축소하지 않습니다. UI 라벨, 페이지 제목·설명, 이미지 `alt` 텍스트, 링크 라벨도 대상 언어에서 같은 목적을 전달해야 합니다. 번역이 모호하거나 저자·기여도처럼 사실 확인이 어려운 경우에는 추정하지 말고 사용자에게 확인합니다.
+
+`_data/cv.yml`과 `_data/cv-ko.yml`의 항목 수·대응 순서·식별자·공개 상태를 함께 유지하고, 공통 UI 문구는 `_data/translations.yml`에서 동시에 갱신합니다. 배포 전에는 `$verify-cv-site-content`로 언어별 렌더링과 의미 일치를 점검합니다.
+
 페이지는 하나의 `main` 안에 다음 순서로 구성됩니다. 섹션의 순서를 바꾸려면 `index.md`에서 해당 `<section>` 블록을 이동해야 합니다.
 
 | 순서 | 화면 영역 | 데이터·자산 | 표시 내용 |
@@ -49,11 +57,12 @@
 | 2 | 히어로 | `name`, `role`, `hero-cover.png`, `profile.png` | 커버 이미지, 프로필 사진, `Curriculum Vitae`, 이름, 직무 |
 | 3 | 연락처·외부 프로필 | `location`, `email`, `profiles` | 지역, 이메일, GitHub·LinkedIn·Google Scholar 등의 아이콘·라벨·링크 |
 | 4 | About Me | `summary` | 자기소개 본문 |
-| 5 | Education | `education` | 학교 로고, 학위, 학과, 선택 연구·지도교수 정보, 기간, GPA |
-| 6 | Work Experience | `experience` | 기간, 회사 로고, 역할, 회사명, 핵심 업무 목록 |
-| 7 | Contributed Projects | `projects` | 제목, 기간·소속, 설명, 기여 항목 목록 |
-| 8 | Patents | `patents` | 특허 제목, 공개 여부별 본문, 상태·날짜·번호·기여도, 공개 특허 링크 |
-| 9 | Papers | `papers` | 논문 제목, 학술지·학회, 저자, 설명, DOI, 키워드, 논문 링크 |
+| 5 | Core Skills | `skills` | 역량 그룹별 전문 지식·설계 및 분석 스킬 목록 |
+| 6 | Education | `education` | 학교 로고, 학위, 학과, 선택 연구·지도교수 정보, 기간, GPA |
+| 7 | Work Experience | `experience` | 기간, 회사 로고, 역할, 회사명, 핵심 업무 목록 |
+| 8 | Contributed Projects | `projects` | 제목, 기간·소속, 설명, 기여 항목 목록 |
+| 9 | Patents | `patents` | 특허 제목, 공개 여부별 본문, 상태·날짜·번호·기여도, 공개 특허 링크 |
+| 10 | Papers | `papers` | 논문 제목, 학술지·학회, 저자, 설명, DOI, 키워드, 논문 링크 |
 
 각 콘텐츠 영역은 제목, 인라인 SVG 아이콘, 구분선, 카드 또는 목록으로 구성합니다. 모든 목록 데이터는 `_data/cv.yml`의 배열 항목 하나가 화면의 카드 또는 행 하나가 됩니다.
 
@@ -62,6 +71,7 @@
 | 데이터 키 | 항목별 필수 정보 | 정렬·표시 규칙 |
 | --- | --- | --- |
 | `profiles` | `label`, `icon`, `value`, `url` | YAML에 작성한 순서대로 표시합니다. `icon`은 `_includes/icon.html`에 정의되어야 합니다. |
+| `skills` | `label`, `tone`, `items[].label`, `items[].icon` | YAML에 작성한 순서대로 역량 그룹을 표시하고, `tone`에 따라 전문 지식은 청록·설계 및 분석 스킬은 인디고 계열로 구분합니다. 각 그룹의 `items`는 아이콘과 함께 태그 형태로 표시하며, `icon`은 `_includes/icon.html`에 정의되어야 합니다. |
 | `education` | `degree`, `logo`, `department`, `period`, `score` | YAML에 작성한 순서대로 표시합니다. `research`, `advisor`는 입력했을 때만 표시합니다. |
 | `experience` | `period`, `role`, `company`, `logo`, `highlights` | YAML에 작성한 순서대로 표시합니다. 최신 경력이 먼저 보이도록 데이터 자체를 최신순으로 유지합니다. |
 | `projects` | `title`, `period`, `description`, `contributions` | YAML에 작성한 순서대로 표시합니다. 최신 또는 대표 프로젝트가 먼저 오도록 데이터 자체를 관리합니다. |
@@ -75,7 +85,7 @@
 1. `is_registered: true`인 등록 특허를 `registration_date` 내림차순으로 표시합니다.
 2. 이어서 `is_registered: false`인 미등록 특허를 `filing_date` 내림차순으로 표시합니다.
 
-각 특허에는 `title`, `status`, `is_public`, `is_registered`, `filing_date`, `kr_number`, `us_number`, `contribution`을 입력합니다. 등록 특허에는 `registration_date`를 반드시 추가합니다. `publication_date`와 `publication_number`는 값이 있을 때만 표시합니다.
+각 특허에는 `title`, `status`, `is_public`, `is_registered`, `filing_date`, `kr_number`, `us_number`, `contribution`을 입력합니다. `filing_date`는 미국 출원이 있으면 미국 출원일을 사용하고, 없으면 해당 특허의 다른 국가 출원일을 사용합니다. 등록 특허에는 `registration_date`를 반드시 추가합니다. `publication_date`와 `publication_number`는 값이 있을 때만 표시합니다.
 
 `is_public: true`이면 `abstract`를 제공하여 초록을 표시합니다. 공개 레코드 URL이 있으면 `url`을 추가하며, `link_label`로 링크 라벨을 바꿀 수 있습니다. `is_public: false`이면 초록 대신 **Unpublished**만 보이며, `url`이 있어도 링크는 표시되지 않습니다. 미공개 특허에는 비공개 설명이나 문서 URL을 추가하지 않습니다.
 
@@ -163,6 +173,7 @@ GitHub Pages에서는 **Settings → Pages**에서 기본 브랜치의 `/(root)`
 - [ ] CV 사실 정보는 `_data/cv.yml`만 수정했는가?
 - [ ] 새 이미지·로고는 `assets/images/`에 로컬로 저장했고 공개 사용 조건을 확인했는가?
 - [ ] 테마 변경 시 시스템 기본값과 저장된 사용자 선택이 모두 유지되는가?
+- [ ] 영문·한국어의 대응 콘텐츠와 UI 문구가 같은 사실과 의미를 전달하는가?
 - [ ] 라이트·다크, 데스크톱·모바일에서 색상 대비와 레이아웃을 확인했는가?
 - [ ] `bundle exec jekyll build`가 성공하는가?
 - [ ] 미공개 특허, 비공개 URL 등 민감한 정보가 추가되지 않았는가?

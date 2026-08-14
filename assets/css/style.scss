@@ -17,6 +17,10 @@
   --blue: #075bb5;
   --blue-dark: #003f88;
   --blue-icon: #0b69c7;
+  --skill-knowledge: #0f766e;
+  --skill-knowledge-subtle: #e4f4f1;
+  --skill-design: #6251a4;
+  --skill-design-subtle: #eeebf8;
   --section-rule: #d9d9d5;
   --shadow: rgba(20, 32, 50, 0.05);
   color: var(--text);
@@ -41,6 +45,10 @@ html[data-theme='dark'] {
   --blue: #7ab8ff;
   --blue-dark: #c2ddff;
   --blue-icon: #8ec5ff;
+  --skill-knowledge: #5eead4;
+  --skill-knowledge-subtle: #193d3b;
+  --skill-design: #c4b5fd;
+  --skill-design-subtle: #33295d;
   --section-rule: #4a5868;
   --shadow: rgba(0, 0, 0, 0.28);
 }
@@ -364,6 +372,73 @@ h2 {
   line-height: 1.85;
 }
 
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-group {
+  padding: 1.35rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+
+.skill-group--knowledge {
+  --skill-accent: var(--skill-knowledge);
+  --skill-tag-background: var(--skill-knowledge-subtle);
+}
+
+.skill-group--design {
+  --skill-accent: var(--skill-design);
+  --skill-tag-background: var(--skill-design-subtle);
+}
+
+.skill-group h3 {
+  margin-bottom: 0.9rem;
+  color: var(--skill-accent);
+  font-size: 0.95rem;
+}
+
+.skill-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skill-group li {
+  display: inline-flex;
+  gap: 0.32rem;
+  align-items: center;
+  padding: 0.35rem 0.6rem;
+  background: var(--skill-tag-background);
+  border-radius: 999px;
+  color: var(--muted-strong);
+  font-size: 0.82rem;
+}
+
+.skill-group__icon {
+  display: inline-flex;
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--skill-accent);
+  flex: 0 0 0.95rem;
+}
+
+.skill-group__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
 .education-list,
 .experience-list,
 .project-list,
@@ -653,6 +728,10 @@ h3 {
   .experience-item {
     grid-template-columns: 1fr;
     gap: 0.6rem;
+  }
+
+  .skill-list {
+    grid-template-columns: 1fr;
   }
 
   .project-card__heading {

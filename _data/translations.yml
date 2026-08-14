@@ -4,6 +4,7 @@ en:
   profiles_label: External profiles
   new_tab: (opens in a new tab)
   about: About Me
+  skills: Core Skills
   education: Education
   experience: Work Experience
   projects: Contributed Projects
@@ -33,6 +34,7 @@ ko:
   profiles_label: 외부 프로필
   new_tab: 새 탭에서 열기
   about: 소개
+  skills: 핵심 역량
   education: 학력
   experience: 경력
   projects: 참여 프로젝트

@@ -98,11 +98,18 @@ a:focus-visible {
   border: 0;
 }
 
-.theme-toggle {
+.utility-controls {
   position: fixed;
   z-index: 5;
   top: 1rem;
   right: 1rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.language-switch,
+.theme-toggle {
   display: inline-flex;
   gap: 0.45rem;
   align-items: center;
@@ -117,6 +124,17 @@ a:focus-visible {
   font: inherit;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.language-switch {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.language-switch:hover {
+  color: var(--blue-dark);
+  border-color: var(--blue);
+  text-decoration: underline;
 }
 
 .theme-toggle:hover {
@@ -653,7 +671,7 @@ h3 {
 }
 
 @media (max-width: 30rem) {
-  .theme-toggle {
+  .utility-controls {
     top: 0.65rem;
     right: 0.65rem;
   }

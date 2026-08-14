@@ -10,8 +10,9 @@
 | 배포 대상 | GitHub Pages |
 | Ruby 의존성 | `github-pages`, `webrick` |
 | 기본 언어 | 영어 (`_config.yml`의 `lang`) |
-| 기본 페이지 | `index.md` |
-| 콘텐츠 원본 | `_data/cv.yml` |
+| 기본 페이지 | `index.md` (`/`) |
+| 한국어 페이지 | `ko/index.md` (`/ko/`) |
+| 콘텐츠 원본 | `_data/cv.yml`(영문), `_data/cv-ko.yml`(한국어) |
 | 스타일시트 원본 | `assets/css/style.scss` |
 | 테마 동작 스크립트 | `assets/js/theme-toggle.js` |
 
@@ -23,8 +24,11 @@
 | --- | --- |
 | `_config.yml` | 사이트 제목, 설명, 언어, URL, Jekyll 플러그인 및 빌드 제외 경로 설정 |
 | `_data/cv.yml` | 인적 사항, 학력, 경력, 프로젝트, 특허, 논문 등 반복 CV 콘텐츠의 단일 원본 |
-| `index.md` | CV 섹션의 HTML/Liquid 템플릿 및 표시 순서 정의 |
-| `_layouts/default.html` | HTML 문서 골격, SEO 태그, 건너뛰기 링크, 테마 토글, CSS·JS 로드 |
+| `_data/cv-ko.yml` | 한국어 CV의 인적 사항, 학력, 경력, 프로젝트, 특허, 논문 원본 |
+| `_data/translations.yml` | 공통 UI와 섹션 라벨의 영문·한국어 번역 |
+| `index.md`, `ko/index.md` | 언어별 메타데이터와 상호 전환 경로 정의 |
+| `_includes/cv-content.html` | 언어별 CV 데이터를 같은 표시 순서로 렌더링하는 공통 Liquid 템플릿 |
+| `_layouts/default.html` | HTML 문서 골격, SEO 태그, 건너뛰기 링크, 언어·테마 토글, CSS·JS 로드 |
 | `_includes/icon.html` | 섹션 및 연락처에 쓰는 인라인 SVG 아이콘 |
 | `assets/css/style.scss` | 색상 토큰, 레이아웃, 반응형 규칙, 접근성 스타일 |
 | `assets/js/theme-toggle.js` | 테마 전환 UI와 사용자 선택 저장 |
@@ -33,13 +37,15 @@
 
 ## 페이지 내용과 구성
 
-반복되는 사실 정보는 반드시 `_data/cv.yml`에서 수정합니다. `index.md`에는 데이터를 표시하는 Liquid 템플릿만 두며, 동일한 사실 정보를 직접 작성하지 않습니다.
+반복되는 사실 정보는 언어별 데이터 파일에서 수정합니다. 영문은 `_data/cv.yml`, 한국어는 `_data/cv-ko.yml`을 사용하며, 두 파일의 항목 순서·날짜·번호·링크·공개 여부를 함께 유지합니다. 공통 UI 문구는 `_data/translations.yml`에서 관리합니다. `index.md`와 `ko/index.md`에는 언어별 메타데이터와 공통 템플릿 호출만 두며, 동일한 사실 정보를 직접 작성하지 않습니다.
+
+영문은 기본 경로 `/`, 한국어는 `/ko/`로 제공됩니다. 각 페이지 우측 상단의 언어 전환 링크는 대응하는 페이지로 이동합니다. 새 언어를 추가할 때는 해당 CV 데이터 파일, `_data/translations.yml`의 번역 키, 페이지 front matter의 `lang`·`alternate_*` 값을 함께 추가합니다.
 
 페이지는 하나의 `main` 안에 다음 순서로 구성됩니다. 섹션의 순서를 바꾸려면 `index.md`에서 해당 `<section>` 블록을 이동해야 합니다.
 
 | 순서 | 화면 영역 | 데이터·자산 | 표시 내용 |
 | --- | --- | --- | --- |
-| 1 | 공통 UI | `_layouts/default.html` | 본문 건너뛰기 링크와 우측 상단 테마 토글 |
+| 1 | 공통 UI | `_layouts/default.html` | 본문 건너뛰기 링크와 우측 상단 언어 전환·테마 토글 |
 | 2 | 히어로 | `name`, `role`, `hero-cover.png`, `profile.png` | 커버 이미지, 프로필 사진, `Curriculum Vitae`, 이름, 직무 |
 | 3 | 연락처·외부 프로필 | `location`, `email`, `profiles` | 지역, 이메일, GitHub·LinkedIn·Google Scholar 등의 아이콘·라벨·링크 |
 | 4 | About Me | `summary` | 자기소개 본문 |

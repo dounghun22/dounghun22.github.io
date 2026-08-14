@@ -7,9 +7,9 @@
   const setTheme = (theme, persist = false) => {
     document.documentElement.dataset.theme = theme;
     toggle.setAttribute('aria-pressed', String(theme === 'dark'));
-    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.setAttribute('aria-label', theme === 'dark' ? toggle.dataset.switchToLight : toggle.dataset.switchToDark);
     toggle.querySelector('.theme-toggle__icon').textContent = theme === 'dark' ? '☀' : '◐';
-    toggle.querySelector('.theme-toggle__label').textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+    toggle.querySelector('.theme-toggle__label').textContent = theme === 'dark' ? toggle.dataset.lightLabel : toggle.dataset.darkLabel;
 
     if (persist) localStorage.setItem(storageKey, theme);
   };

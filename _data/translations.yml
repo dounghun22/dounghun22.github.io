@@ -1,0 +1,58 @@
+en:
+  cv_label: Curriculum Vitae
+  contact_label: Contact and profiles
+  profiles_label: External profiles
+  new_tab: (opens in a new tab)
+  about: About Me
+  education: Education
+  experience: Work Experience
+  projects: Contributed Projects
+  patents: Patents
+  papers: Papers
+  period: Period
+  gpa: GPA
+  abstract: Abstract
+  unpublished: Unpublished
+  status: Status
+  filing_date: Filing Date
+  registration_date: Registration Date
+  publication_date: Publication Date
+  publication: Publication
+  contribution: Contribution
+  patent_link: Patent link
+  paper_link: Paper link
+  skip_to_content: Skip to main content
+  switch_theme: Switch theme
+  switch_to_light: Switch to light mode
+  switch_to_dark: Switch to dark mode
+  light_mode: Light mode
+  dark_mode: Dark mode
+ko:
+  cv_label: 이력서
+  contact_label: 연락처 및 외부 프로필
+  profiles_label: 외부 프로필
+  new_tab: 새 탭에서 열기
+  about: 소개
+  education: 학력
+  experience: 경력
+  projects: 참여 프로젝트
+  patents: 특허
+  papers: 논문
+  period: 기간
+  gpa: 평점
+  abstract: 초록
+  unpublished: 미공개
+  status: 상태
+  filing_date: 출원일
+  registration_date: 등록일
+  publication_date: 공개일
+  publication: 공개 번호
+  contribution: 기여도
+  patent_link: 특허 링크
+  paper_link: 논문 링크
+  skip_to_content: 본문으로 건너뛰기
+  switch_theme: 테마 전환
+  switch_to_light: 라이트 모드로 전환
+  switch_to_dark: 다크 모드로 전환
+  light_mode: 라이트 모드
+  dark_mode: 다크 모드

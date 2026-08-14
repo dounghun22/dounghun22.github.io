@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% seo %}
+    {% if page.alternate_url %}
+      <link rel="alternate" hreflang="{{ page.alternate_lang }}" href="{{ page.alternate_url | absolute_url }}">
+    {% endif %}
     <script>
       (function () {
         var savedTheme = localStorage.getItem('theme');
@@ -16,11 +19,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
-      <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-      <span class="theme-toggle__label">Switch theme</span>
-    </button>
+    {% assign t = site.data.translations[page.lang] | default: site.data.translations.en %}
+    <a class="skip-link" href="#main-content">{{ t.skip_to_content }}</a>
+    <div class="utility-controls">
+      {% if page.alternate_url %}
+        <a class="language-switch" href="{{ page.alternate_url | relative_url }}" hreflang="{{ page.alternate_lang }}" lang="{{ page.alternate_lang }}">{{ page.alternate_label }}</a>
+      {% endif %}
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" data-switch-to-light="{{ t.switch_to_light }}" data-switch-to-dark="{{ t.switch_to_dark }}" data-light-label="{{ t.light_mode }}" data-dark-label="{{ t.dark_mode }}">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        <span class="theme-toggle__label">{{ t.switch_theme }}</span>
+      </button>
+    </div>
     <main id="main-content" class="site-content">
       {{ content }}
     </main>

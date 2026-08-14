@@ -1,0 +1,38 @@
+---
+---
+
+:root {
+  color: #17202a;
+  background: #f8f9fb;
+  font-family: Inter, Pretendard, "Noto Sans KR", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.site-content {
+  width: min(100% - 2rem, 48rem);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+a {
+  color: #005fcc;
+}
+
+a:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+@media (max-width: 40rem) {
+  .site-content {
+    padding: 2rem 0;
+  }
+}

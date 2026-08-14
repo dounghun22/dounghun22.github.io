@@ -1,0 +1,21 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler and Ruby tooling
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary agent artifacts
+.agents-tmp/

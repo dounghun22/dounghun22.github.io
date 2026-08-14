@@ -1,0 +1,17 @@
+title: "Donghun Jeong | CV"
+description: "Donghun Jeong의 경력과 프로젝트를 소개하는 개인 CV입니다."
+lang: ko-KR
+url: ""
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - AGENTS.md
+  - .agents-tmp
+  - vendor

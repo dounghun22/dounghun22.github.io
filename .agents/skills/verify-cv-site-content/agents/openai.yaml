@@ -1,0 +1,4 @@
+interface:
+  display_name: "CV 콘텐츠 검증"
+  short_description: "Jekyll CV 빌드·배포 전 공개 콘텐츠를 체계적으로 점검합니다."
+  default_prompt: "$verify-cv-site-content로 배포 전 CV 웹페이지 콘텐츠를 점검해줘."

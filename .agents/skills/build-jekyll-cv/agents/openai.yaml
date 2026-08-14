@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Jekyll CV"
+  short_description: "Create and validate a Jekyll GitHub Pages CV site."
+  default_prompt: "Use $build-jekyll-cv to create or improve this GitHub Pages CV site."

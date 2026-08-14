@@ -1,0 +1,34 @@
+---
+name: verify-cv-site-content
+description: Jekyll 기반 CV 사이트를 빌드하거나 GitHub Pages 배포를 준비할 때 공개 페이지의 콘텐츠, 표시 순서, 자산, 링크, 테마 및 접근성 조건을 점검한다. CV 내용 변경, 페이지 구성 변경, 배포 전 검증 요청에 사용한다.
+---
+
+# CV 사이트 콘텐츠 검증
+
+`doc/site-guide.md`를 기준으로 현재 구현과 공개 페이지 결과를 점검한다. 사실 정보를 새로 만들거나, 사용자의 요청 없이 콘텐츠·배포 설정을 변경하지 않는다.
+
+## 검증 절차
+
+1. `AGENTS.md`와 `doc/site-guide.md`를 읽고, 현재 작업의 변경 범위를 확인한다. `.codegraph/`가 있으면 CodeGraph를 먼저 사용해 관련 구현을 찾는다.
+2. `_data/cv.yml`, `index.md`, `_layouts/default.html`, `_config.yml` 및 변경된 자산·CSS·JS를 확인한다. 화면에 표시되는 사실 정보가 `_data/cv.yml`과 일치하는지 확인한다.
+3. 다음 콘텐츠 규칙을 점검한다.
+   - 페이지 섹션은 히어로, 연락처·외부 프로필, About Me, Education, Work Experience, Contributed Projects, Patents, Papers 순서로 표시한다.
+   - `profiles`, `education`, `experience`, `projects`는 YAML 작성 순서를 유지한다.
+   - 특허는 등록 특허(`is_registered: true`)를 `registration_date` 내림차순으로 먼저 표시하고, 미등록 특허를 `filing_date` 내림차순으로 뒤이어 표시한다.
+   - 논문은 주저자(`is_first_author: true`)를 `year` 내림차순으로 먼저 표시하고, 공저 논문을 `year` 내림차순으로 뒤이어 표시한다.
+   - 공개 특허만 초록과 외부 링크를 표시하고, 미공개 특허에는 비공개 초록·문서 URL을 노출하지 않는다.
+   - 누락된 로고·이미지·아이콘 참조, 빈 링크, 잘못된 대체 텍스트, 외부 이미지 URL을 확인한다. 새 탭 외부 링크에는 안전한 `rel` 속성과 안내가 있어야 한다.
+   - 토글은 시스템 기본 테마, `localStorage`의 `theme` 선택, 라이트·다크 대비를 유지해야 한다.
+4. 콘텐츠·스타일·반응형 변경이 있으면 데스크톱, 768px 이하, 480px 이하에서 긴 제목·링크·특허 번호가 깨지지 않는지 확인한다. 필요하면 로컬 서버로 렌더링 결과를 확인한다.
+5. `bundle exec jekyll build`를 실행한다. 빌드 실패, 누락 자산, Liquid 오류, 깨진 내부 URL 또는 검증하지 못한 항목은 배포 전에 해결하거나 명확히 보고한다.
+6. 페이지 구성, 데이터 구조·정렬, 자산 경로, 테마, 반응형, 접근성 또는 배포 절차를 변경했다면 `doc/site-guide.md`도 같은 변경에 맞춰 갱신했는지 확인한다.
+
+## 결과 보고
+
+검증 결과에는 다음을 짧게 포함한다.
+
+- 점검한 콘텐츠·표시 순서·테마·반응형 항목
+- `bundle exec jekyll build` 결과
+- 발견한 문제와 배포 가능 여부
+
+배포 실행은 사용자가 명시적으로 요청한 경우에만 수행한다.

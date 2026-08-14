@@ -1,0 +1,4 @@
+interface:
+  display_name: "CV 연구성과 현행화"
+  short_description: "특허·논문을 공개 근거로 안전하게 최신화합니다."
+  default_prompt: "$refresh-cv-research로 CV의 특허와 논문을 최신화해줘."

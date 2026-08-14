@@ -1,6 +1,6 @@
 title: "Donghun Jeong | CV"
-description: "Donghun Jeong의 경력과 프로젝트를 소개하는 개인 CV입니다."
-lang: ko-KR
+description: "Donghun Jeong's professional experience, projects, and research in computer architecture and digital logic design."
+lang: en
 url: ""
 baseurl: ""
 
@@ -13,5 +13,6 @@ plugins:
 
 exclude:
   - AGENTS.md
+  - doc
   - .agents-tmp
   - vendor

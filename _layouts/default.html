@@ -1,14 +1,29 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'ko-KR' }}">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% seo %}
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem('theme');
+        var theme = savedTheme === 'dark' || savedTheme === 'light'
+          ? savedTheme
+          : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+      }());
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
-    <main class="site-content">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+      <span class="theme-toggle__label">Switch theme</span>
+    </button>
+    <main id="main-content" class="site-content">
       {{ content }}
     </main>
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   </body>
 </html>

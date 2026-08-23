@@ -161,6 +161,7 @@ patents:
     is_public: true
     is_registered: false
     filing_date: "2024-12-24"
+    publication_date: "2026-02-26"
     kr_number: KR 10-2024-0110892
     us_number: US 19/000864
     contribution: 40% Contribution
@@ -172,6 +173,7 @@ patents:
     is_public: true
     is_registered: false
     filing_date: "2024-12-12"
+    publication_date: "2026-02-05"
     kr_number: KR 10-2024-0101721
     us_number: US 18/977,949
     contribution: 30% Contribution
@@ -183,6 +185,7 @@ patents:
     is_public: true
     is_registered: true
     filing_date: "2024-10-27"
+    publication_date: "2026-01-01"
     registration_date: "2026"
     registration_date_label: Registration Year
     kr_number: KR 10-2024-0086033
@@ -207,7 +210,7 @@ patents:
     is_public: true
     is_registered: true
     filing_date: "2023-12-05"
-    registration_date: "2025-12-09"
+    registration_date: "2025-12-18"
     kr_number: KR 10-2899852
     us_number: US 18/529,534 (filing)
     contribution: 25% Contribution
@@ -216,11 +219,11 @@ patents:
     url: https://patents.google.com/patent/KR102899852B1/en
 
 papers:
-  - title: "A New NB-LDPC Code Construction Method with Arbitrary Generalized Girth"
+  - title: "A New NB-LDPC Code Construction Method With Arbitrary Generalized Girth"
     year: 2026
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
-    venue: "IEEE Transactions on Communications · 2026 · Co-Author"
+    venue: "IEEE Transactions on Communications 74, 8133–8146 · 2026 · Co-Author"
     description: Proposes a permutation-graph-based analysis and construction method for NB-LDPC codes with arbitrary generalized girth, reducing construction complexity while improving error-correction performance.
     keywords: NB-LDPC, Error-Correcting Code, Generalized Girth
     doi: 10.1109/TCOMM.2026.3686671

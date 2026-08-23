@@ -161,6 +161,7 @@ patents:
     is_public: true
     is_registered: false
     filing_date: "2024-12-24"
+    publication_date: "2026-02-26"
     kr_number: KR 10-2024-0110892
     us_number: US 19/000864
     contribution: 기여도 40%
@@ -172,6 +173,7 @@ patents:
     is_public: true
     is_registered: false
     filing_date: "2024-12-12"
+    publication_date: "2026-02-05"
     kr_number: KR 10-2024-0101721
     us_number: US 18/977,949
     contribution: 기여도 30%
@@ -183,6 +185,7 @@ patents:
     is_public: true
     is_registered: true
     filing_date: "2024-10-27"
+    publication_date: "2026-01-01"
     registration_date: "2026"
     registration_date_label: 등록 연도
     kr_number: KR 10-2024-0086033
@@ -207,7 +210,7 @@ patents:
     is_public: true
     is_registered: true
     filing_date: "2023-12-05"
-    registration_date: "2025-12-09"
+    registration_date: "2025-12-18"
     kr_number: KR 10-2899852
     us_number: US 18/529,534 (출원)
     contribution: 기여도 25%
@@ -220,7 +223,7 @@ papers:
     year: 2026
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
-    venue: "IEEE Transactions on Communications · 2026 · 공저자"
+    venue: "IEEE Transactions on Communications 74, 8133–8146 · 2026 · 공저자"
     description: 순열 그래프 기반 분석·구성 방식을 제안해 임의의 일반화된 girth를 갖는 NB-LDPC 코드의 구성 복잡도를 낮추고 오류 정정 성능을 개선합니다.
     keywords: NB-LDPC, 오류 정정 코드, 일반화된 Girth
     doi: 10.1109/TCOMM.2026.3686671

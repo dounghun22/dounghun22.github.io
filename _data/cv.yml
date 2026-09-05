@@ -193,7 +193,8 @@ patents:
     contribution: 80% Contribution
     publication_number: US 12,704,958 B2 · US 20260003499 A1
     abstract: Manages free physical storage regions by adding a free buffer to a service queue that handles allocation and return requests, reducing memory-access delay and improving memory-operation performance.
-    url: https://patents.google.com/patent/US12704958B2/en
+    link_label: Justia patent record
+    url: https://patents.justia.com/patent/12704958
   - title: CONTROLLER, MEMORY DEVICE AND MEMORY SYSTEM
     status: Published · Under Examination
     is_public: true

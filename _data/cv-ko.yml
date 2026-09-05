@@ -193,7 +193,8 @@ patents:
     contribution: 기여도 80%
     publication_number: US 12,704,958 B2 · US 20260003499 A1
     abstract: 할당·반환 요청을 처리하는 service queue에 free buffer를 추가해 여유 물리 저장 영역을 관리하고, 메모리 접근 지연을 줄여 메모리 동작 성능을 향상합니다.
-    url: https://patents.google.com/patent/US12704958B2/en
+    link_label: Justia 특허 기록
+    url: https://patents.justia.com/patent/12704958
   - title: 컨트롤러, 메모리 장치 및 메모리 시스템
     status: 공개 · 심사 중
     is_public: true

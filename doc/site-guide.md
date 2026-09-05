@@ -62,10 +62,10 @@
 | 6 | Education | `education` | 학교 로고, 학위, 학과, 선택 연구·지도교수 정보, 기간, GPA |
 | 7 | Work Experience | `experience` | 기간, 회사 로고, 역할, 회사명, 핵심 업무 목록 |
 | 8 | Contributed Projects | `projects` | 제목, 기간·소속, 설명, 기여 항목 목록 |
-| 9 | Patents | `patents` | 공개 특허의 제목, 초록, 상태·날짜·번호·기여도, 외부 링크 |
-| 10 | Papers | `papers` | 공개 논문의 제목, 학술지·학회, 저자, 설명, DOI, 키워드, 논문 링크 |
+| 9 | Patents | `patents` | 특허 제목, 공개 여부별 본문, 상태·날짜·번호·기여도, 공개 특허 링크 |
+| 10 | Papers | `papers` | 논문 제목, 학술지·학회, 저자, 설명, DOI, 키워드, 논문 링크 |
 
-각 콘텐츠 영역은 제목, 인라인 SVG 아이콘, 구분선, 카드 또는 목록으로 구성합니다. 공개 목록 데이터는 `_data/cv.yml`의 배열 항목 하나가 화면의 카드 또는 행 하나가 됩니다.
+각 콘텐츠 영역은 제목, 인라인 SVG 아이콘, 구분선, 카드 또는 목록으로 구성합니다. 모든 목록 데이터는 `_data/cv.yml`의 배열 항목 하나가 화면의 카드 또는 행 하나가 됩니다.
 
 ### 섹션별 데이터와 기본 표시 순서
 
@@ -77,22 +77,22 @@
 | `experience` | `period`, `role`, `company`, `logo`, `highlights` | YAML에 작성한 순서대로 표시합니다. 최신 경력이 먼저 보이도록 데이터 자체를 최신순으로 유지합니다. |
 | `projects` | `title`, `period`, `description`, `contributions` | YAML에 작성한 순서대로 표시합니다. 최신 또는 대표 프로젝트가 먼저 오도록 데이터 자체를 관리합니다. |
 | `patents` | 아래 특허 항목 참조 | 등록 여부와 날짜를 기준으로 템플릿에서 정렬합니다. |
-| `papers` | `title`, `is_public`, `year`, `is_first_author`, `authors`, `venue`, `doi`, `url` | `is_public: true`인 항목만 주저자 여부를 먼저 구분한 후, 각 그룹을 연도 내림차순으로 정렬합니다. |
+| `papers` | `title`, `year`, `is_first_author`, `authors`, `venue`, `doi`, `url` | 주저자 여부를 먼저 구분한 후, 각 그룹을 연도 내림차순으로 정렬합니다. |
 
 ### 특허 표시 규칙
 
-특허는 `is_public: true`인 항목만 공개 HTML에 렌더링되어 검색 색인 대상이 됩니다. 표시 우선순위는 `_includes/cv-content.html`에서 계산하며, `_data/cv.yml`의 작성 순서와 무관합니다.
+특허의 표시 우선순위는 `_includes/cv-content.html`에서 계산하며, `_data/cv.yml`의 작성 순서와 무관합니다.
 
 1. `is_registered: true`인 등록 특허를 `registration_date` 내림차순으로 표시합니다.
 2. 이어서 `is_registered: false`인 미등록 특허를 `filing_date` 내림차순으로 표시합니다.
 
 각 특허에는 `title`, `status`, `is_public`, `is_registered`, `filing_date`, `kr_number`, `us_number`, `contribution`을 입력합니다. `filing_date`는 미국 출원이 있으면 미국 출원일을 사용하고, 없으면 해당 특허의 다른 국가 출원일을 사용합니다. 등록 특허에는 `registration_date`를 반드시 추가합니다. `publication_date`와 `publication_number`는 값이 있을 때만 표시합니다.
 
-`is_public: true`이면 `abstract`를 제공하여 초록을 표시합니다. 공개 레코드 URL이 있으면 `url`을 추가하며, `link_label`로 링크 라벨을 바꿀 수 있습니다. 미공개 특허의 제목·번호·초록·링크는 공개 저장소에 저장하지 않습니다.
+`is_public: true`이면 `abstract`를 제공하여 초록을 표시합니다. 공개 레코드 URL이 있으면 `url`을 추가하며, `link_label`로 링크 라벨을 바꿀 수 있습니다. `is_public: false`이면 초록 대신 **Unpublished**만 보이며, `url`이 있어도 링크는 표시되지 않습니다. 미공개 특허에는 비공개 설명이나 문서 URL을 추가하지 않습니다.
 
 ### 논문 표시 규칙
 
-논문은 `is_public: true`인 항목만 `is_first_author` 값에 따라 두 그룹으로 나눈 뒤 합칩니다. 새 논문은 공개 DOI 또는 공식 공개 페이지가 확인된 경우에만 `is_public: true`로 설정합니다.
+논문은 `is_first_author` 값에 따라 두 그룹으로 나눈 뒤 합칩니다.
 
 1. `is_first_author: true`인 주저자 논문을 `year` 내림차순으로 표시합니다.
 2. `is_first_author: false`인 공저 논문을 `year` 내림차순으로 표시합니다.
@@ -156,7 +156,7 @@
 
 `jekyll-seo-tag`와 `jekyll-sitemap` 플러그인은 페이지별 title·description·canonical URL·기본 구조화 데이터 및 `/sitemap.xml`을 생성합니다. `_config.yml`의 `url`, `baseurl`, `title`, `description`, `logo`, `social`은 실제 공개 사이트 정보와 일치해야 합니다.
 
-`_layouts/default.html`은 영문(`/`)·한국어(`/ko/`)의 자기 참조와 상호 참조 `hreflang`, 기본 언어를 가리키는 `x-default`, 그리고 공개 프로필을 담은 `Person` JSON-LD를 생성합니다. SEO 설명을 수정할 때는 두 언어 페이지 front matter가 같은 경력 사실을 정확히 반영하는지 확인합니다.
+`_layouts/default.html`은 영문(`/`)·한국어(`/ko/`)의 자기 참조와 상호 참조 `hreflang`, 기본 언어를 가리키는 `x-default`, 공개 프로필을 담은 `Person` JSON-LD, 그리고 `is_public: true` 특허만 포함하는 `Patent` JSON-LD를 생성합니다. SEO 설명을 수정할 때는 두 언어 페이지 front matter가 같은 경력 사실을 정확히 반영하는지 확인합니다.
 
 `robots.txt`는 전체 사이트 크롤링을 허용하고 `/sitemap.xml`을 안내합니다. Google Search Console에서 URL 접두어 속성을 검증할 때는 HTML 태그 방식의 `content` 값만 `_config.yml`의 `webmaster_verifications.google`에 입력합니다. 빌드·배포 후에는 Search Console에 `https://dounghun22.github.io/sitemap.xml`을 제출합니다.
 
@@ -169,7 +169,7 @@
 - 페이지 경로·배포 주소 변경: `_config.yml`의 `url`·`baseurl`, canonical URL, `hreflang`, `robots.txt`의 sitemap URL
 - 페이지 추가·삭제·공개 범위 변경: `robots.txt` 규칙, `/sitemap.xml` 포함 여부, Search Console sitemap 재제출 필요성
 
-특허·논문은 `is_public: true`인 공개 문건만 SEO·색인 대상이다. 미공개 문건은 공개 저장소, 공개 HTML, 구조화 데이터, sitemap에 포함하지 않는다.
+미공개 특허는 기존 목록에 유지하되 초록·외부 링크를 표시하지 않는다. `Patent` JSON-LD에는 `is_public: true` 특허만 포함해 공개 특허의 검색 신호를 우선 강화한다. 동일 CV 페이지의 미공개 특허 제목까지 개별적으로 색인 제외하거나 순위를 강제할 수는 없다.
 
 모든 공개 변경 후에는 `bundle exec jekyll build`를 실행하고, 배포 환경에서 canonical URL·`/robots.txt`·`/sitemap.xml`의 실제 응답을 확인합니다. 검증 메타태그 값은 Google Search Console에서 발급한 값과 일치해야 합니다.
 

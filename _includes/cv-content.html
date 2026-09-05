@@ -117,15 +117,14 @@
   <section class="cv-section" aria-labelledby="patents-heading">
     <h2 id="patents-heading"><span class="section-heading__icon">{% include icon.html name='patents' %}</span>{{ t.patents }}</h2>
     <div class="section-rule"></div>
-    {% assign public_patents = cv.patents | where: "is_public", true %}
-    {% assign registered_patents = public_patents | where: "is_registered", true | sort: "registration_date" | reverse %}
-    {% assign pending_patents = public_patents | where: "is_registered", false | sort: "filing_date" | reverse %}
+    {% assign registered_patents = cv.patents | where: "is_registered", true | sort: "registration_date" | reverse %}
+    {% assign pending_patents = cv.patents | where: "is_registered", false | sort: "filing_date" | reverse %}
     {% assign ordered_patents = registered_patents | concat: pending_patents %}
     <div class="patent-list">
       {% for patent in ordered_patents %}
         <article class="patent-card">
           <h3>{{ patent.title }}</h3>
-          <p class="patent-card__abstract"><strong>{{ t.abstract }}</strong>{{ patent.abstract }}</p>
+          {% if patent.is_public %}<p class="patent-card__abstract"><strong>{{ t.abstract }}</strong>{{ patent.abstract }}</p>{% else %}<p class="patent-card__unpublished">{{ t.unpublished }}</p>{% endif %}
           <dl class="patent-card__meta">
             <div><dt>{{ t.status }}</dt><dd>{{ patent.status }}</dd></div>
             <div><dt>{% if patent.registration_date %}{{ patent.registration_date_label | default: t.registration_date }}{% else %}{{ t.filing_date }}{% endif %}</dt><dd>{{ patent.registration_date | default: patent.filing_date }}</dd></div>
@@ -135,7 +134,7 @@
             {% if patent.publication_number %}<div><dt>{{ t.publication }}</dt><dd>{{ patent.publication_number }}</dd></div>{% endif %}
             <div><dt>{{ t.contribution }}</dt><dd>{{ patent.contribution }}</dd></div>
           </dl>
-          {% if patent.url %}<a class="resource-link" href="{{ patent.url }}" rel="noopener noreferrer" target="_blank">{{ patent.link_label | default: t.patent_link }} <span class="sr-only">({{ t.new_tab }})</span><span aria-hidden="true">↗</span></a>{% endif %}
+          {% if patent.is_public and patent.url %}<a class="resource-link" href="{{ patent.url }}" rel="noopener noreferrer" target="_blank">{{ patent.link_label | default: t.patent_link }} <span class="sr-only">({{ t.new_tab }})</span><span aria-hidden="true">↗</span></a>{% endif %}
         </article>
       {% endfor %}
     </div>
@@ -144,9 +143,8 @@
   <section class="cv-section" aria-labelledby="papers-heading">
     <h2 id="papers-heading"><span class="section-heading__icon">{% include icon.html name='papers' %}</span>{{ t.papers }}</h2>
     <div class="section-rule"></div>
-    {% assign public_papers = cv.papers | where: "is_public", true %}
-    {% assign first_author_papers = public_papers | where: "is_first_author", true | sort: "year" | reverse %}
-    {% assign coauthor_papers = public_papers | where: "is_first_author", false | sort: "year" | reverse %}
+    {% assign first_author_papers = cv.papers | where: "is_first_author", true | sort: "year" | reverse %}
+    {% assign coauthor_papers = cv.papers | where: "is_first_author", false | sort: "year" | reverse %}
     {% assign ordered_papers = first_author_papers | concat: coauthor_papers %}
     <div class="paper-list">
       {% for paper in ordered_papers %}

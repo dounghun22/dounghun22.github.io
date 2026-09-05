@@ -16,18 +16,32 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "{{ '/' | absolute_url }}#donghun-jeong",
-        "name": {{ seo_cv.name | jsonify }},
-        "url": {{ '/' | absolute_url | jsonify }},
-        "image": {{ '/assets/images/profile.png' | absolute_url | jsonify }},
-        "jobTitle": {{ seo_cv.role | jsonify }},
-        "description": {{ page.description | default: site.description | jsonify }},
-        "email": {{ seo_cv.email | prepend: 'mailto:' | jsonify }},
-        "sameAs": [
-          {% for profile in seo_cv.profiles %}
-            {{ profile.url | jsonify }}{% unless forloop.last %},{% endunless %}
-          {% endfor %}
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "{{ '/' | absolute_url }}#donghun-jeong",
+            "name": {{ seo_cv.name | jsonify }},
+            "url": {{ '/' | absolute_url | jsonify }},
+            "image": {{ '/assets/images/profile.png' | absolute_url | jsonify }},
+            "jobTitle": {{ seo_cv.role | jsonify }},
+            "description": {{ page.description | default: site.description | jsonify }},
+            "email": {{ seo_cv.email | prepend: 'mailto:' | jsonify }},
+            "sameAs": [
+              {% for profile in seo_cv.profiles %}
+                {{ profile.url | jsonify }}{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ]
+          }{% assign public_patents = seo_cv.patents | where: "is_public", true %}{% for patent in public_patents %},
+          {
+            "@type": "Patent",
+            "name": {{ patent.title | jsonify }},
+            "description": {{ patent.abstract | jsonify }},
+            "url": {{ patent.url | jsonify }},
+            "contributor": {
+              "@id": "{{ '/' | absolute_url }}#donghun-jeong"
+            }{% if patent.publication_number %},
+            "identifier": {{ patent.publication_number | jsonify }}{% endif %}
+          }{% endfor %}
         ]
       }
     </script>

@@ -112,6 +112,38 @@ projects:
       - Python, NumPy, Pandas를 활용한 시뮬레이터 추출 원시 데이터 분석
 
 patents:
+  - title: 저장 장치 및 이를 포함하는 전자 장치
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2025-12-15"
+    kr_number: KR 10-2025-0091692
+    us_number: US 19/419116
+    contribution: 기여도 85%
+  - title: 컨트롤러, 메모리 장치 및 데이터 저장 시스템
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2025-11-07"
+    kr_number: KR 10-2025-0083100
+    us_number: US 19/382262
+    contribution: 기여도 70%
+  - title: 메모리 시스템 및 메모리 시스템의 동작 방법
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2025-12-12"
+    kr_number: KR 10-2025-0032152
+    us_number: US 19/417330
+    contribution: 기여도 100%
+  - title: 제어 장치, 데이터 저장 장치 및 컴퓨팅 시스템
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2025-07-29"
+    kr_number: KR 10-2025-0064294
+    us_number: US 19/284012
+    contribution: 기여도 100%
   - title: 제어 장치, 메모리 장치 및 데이터 저장 장치
     status: 공개 · 심사 중
     is_public: true
@@ -188,7 +220,6 @@ patents:
 
 papers:
   - title: "임의의 일반화된 girth를 갖는 새로운 NB-LDPC 코드 구성 방법"
-    is_public: true
     year: 2026
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
@@ -198,7 +229,6 @@ papers:
     doi: 10.1109/TCOMM.2026.3686671
     url: https://doi.org/10.1109/TCOMM.2026.3686671
   - title: "HBM 아키텍처의 클러스터 오류 정정을 위한 새로운 이중 계층 ECC 구성 방법"
-    is_public: true
     year: 2025
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
@@ -208,7 +238,6 @@ papers:
     doi: 10.1109/TCSII.2025.3593226
     url: https://doi.org/10.1109/TCSII.2025.3593226
   - title: "메타데이터를 고려한 DRAM 시스템용 새로운 ECC 구성 방법"
-    is_public: true
     year: 2025
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
@@ -218,7 +247,6 @@ papers:
     doi: 10.1109/TC.2024.3521545
     url: https://doi.org/10.1109/TC.2024.3521545
   - title: "Demand MemCpy: 이기종 컴퓨팅을 위한 연산과 데이터 전송의 중첩"
-    is_public: true
     year: 2022
     is_first_author: true
     authors: Donghun Jeong, Jihun Park, and Jungrae Kim
@@ -228,7 +256,6 @@ papers:
     doi: 10.1109/ACCESS.2022.3195271
     url: https://doi.org/10.1109/ACCESS.2022.3195271
   - title: "UVMMU: 이기종 컴퓨팅을 위한 하드웨어 오프로딩 페이지 마이그레이션"
-    is_public: true
     year: 2023
     is_first_author: false
     authors: Jihun Park, Donghun Jeong, and Jungrae Kim
@@ -238,7 +265,6 @@ papers:
     doi: 10.23919/DATE56975.2023.10137307
     url: https://doi.org/10.23919/DATE56975.2023.10137307
   - title: "Multi-Prediction Compression: GP-GPU를 위한 효율적이고 확장 가능한 메모리 압축 프레임워크"
-    is_public: true
     year: 2022
     is_first_author: false
     authors: Hoyong Jin, Donghun Jeong, Taewon Park, Jong Hwan Ko, and Jungrae Kim

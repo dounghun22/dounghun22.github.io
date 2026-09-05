@@ -27,7 +27,7 @@ Markdown의 경력 날짜·역할·성과 표기는 일관되게 유지합니다
 
 ## SEO 유지보수
 
-사이트의 공개 콘텐츠, 페이지 경로·언어, 이미지·프로필, 레이아웃, URL·배포 설정을 변경할 때는 SEO를 함께 검토·갱신합니다. 페이지별 title·description·canonical URL, `hreflang`, 구조화 데이터(JSON-LD), `robots.txt`, sitemap을 변경 범위에 맞게 유지합니다. 특허·논문은 `is_public: true`인 공개 문건만 공개 HTML과 검색 색인 대상에 포함합니다. 미공개 문건의 제목·번호·초록·링크는 공개 저장소와 렌더링 결과에 저장하지 않습니다. Google Search Console 검증과 sitemap 제출 상태도 배포 전 확인하며, SEO 기준 변경은 같은 작업에서 `doc/site-guide.md`에 반영합니다.
+사이트의 공개 콘텐츠, 페이지 경로·언어, 이미지·프로필, 레이아웃, URL·배포 설정을 변경할 때는 SEO를 함께 검토·갱신합니다. 페이지별 title·description·canonical URL, `hreflang`, 구조화 데이터(JSON-LD), `robots.txt`, sitemap을 변경 범위에 맞게 유지합니다. 미공개 특허는 기존 목록에 표시하되 초록·외부 링크를 노출하지 않습니다. 공개 특허만 SEO 구조화 데이터와 외부 공개 레코드로 검색 신호를 강화합니다. Google Search Console 검증과 sitemap 제출 상태도 배포 전 확인하며, SEO 기준 변경은 같은 작업에서 `doc/site-guide.md`에 반영합니다.
 
 ## 커밋과 Pull Request 지침
 

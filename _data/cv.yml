@@ -112,6 +112,38 @@ projects:
       - Analyzed simulator-extracted raw data with Python, NumPy, and Pandas.
 
 patents:
+  - title: STORAGE DEVICE AND ELECTRONIC DEVICE INCLUSING THE SAME
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2025-12-15"
+    kr_number: KR 10-2025-0091692
+    us_number: US 19/419116
+    contribution: 85% Contribution
+  - title: CONTROLLER, MEMORY DEVICE AND DATA STORAGE SYSTEM
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2025-11-07"
+    kr_number: KR 10-2025-0083100
+    us_number: US 19/382262
+    contribution: 70% Contribution
+  - title: MEMORY SYSTEM AND OPERATING METHOD OF MEMORY SYSTEM
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2025-12-12"
+    kr_number: KR 10-2025-0032152
+    us_number: US 19/417330
+    contribution: 100% Contribution
+  - title: CONTROL DEVICE, DATA STORAGE DEVICE AND COMPUTING SYSTEM
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2025-07-29"
+    kr_number: KR 10-2025-0064294
+    us_number: US 19/284012
+    contribution: 100% Contribution
   - title: CONTROL DEVICE, MEMORY DEVICE AND DATA STORAGE DEVICE
     status: Published · Under Examination
     is_public: true
@@ -188,7 +220,6 @@ patents:
 
 papers:
   - title: "A New NB-LDPC Code Construction Method With Arbitrary Generalized Girth"
-    is_public: true
     year: 2026
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
@@ -198,7 +229,6 @@ papers:
     doi: 10.1109/TCOMM.2026.3686671
     url: https://doi.org/10.1109/TCOMM.2026.3686671
   - title: "A New Two-Tiered ECC Configuration Method for Cluster Error Correction in HBM Architecture"
-    is_public: true
     year: 2025
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
@@ -208,7 +238,6 @@ papers:
     doi: 10.1109/TCSII.2025.3593226
     url: https://doi.org/10.1109/TCSII.2025.3593226
   - title: "A New ECC Configuration Method for DRAM System Considering Metadata"
-    is_public: true
     year: 2025
     is_first_author: false
     authors: Jaeil Lim, Jaewon Chung, Donghun Jeong, Daegeun Jee, and Euicheol Lim
@@ -218,7 +247,6 @@ papers:
     doi: 10.1109/TC.2024.3521545
     url: https://doi.org/10.1109/TC.2024.3521545
   - title: "Demand MemCpy: Overlapping of Computation and Data Transfer for Heterogeneous Computing"
-    is_public: true
     year: 2022
     is_first_author: true
     authors: Donghun Jeong, Jihun Park, and Jungrae Kim
@@ -228,7 +256,6 @@ papers:
     doi: 10.1109/ACCESS.2022.3195271
     url: https://doi.org/10.1109/ACCESS.2022.3195271
   - title: "UVMMU: Hardware-Offloaded Page Migration for Heterogeneous Computing"
-    is_public: true
     year: 2023
     is_first_author: false
     authors: Jihun Park, Donghun Jeong, and Jungrae Kim
@@ -238,7 +265,6 @@ papers:
     doi: 10.23919/DATE56975.2023.10137307
     url: https://doi.org/10.23919/DATE56975.2023.10137307
   - title: "Multi-Prediction Compression: An Efficient and Scalable Memory Compression Framework for GP-GPU"
-    is_public: true
     year: 2022
     is_first_author: false
     authors: Hoyong Jin, Donghun Jeong, Taewon Park, Jong Hwan Ko, and Jungrae Kim

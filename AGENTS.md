@@ -25,6 +25,15 @@ Markdown의 경력 날짜·역할·성과 표기는 일관되게 유지합니다
 
 위 기준이 바뀌면 같은 변경에 `doc/site-guide.md`를 반드시 최신 상태로 수정합니다. 세부 점검 절차와 결과 보고 형식은 `$verify-cv-site-content`를 따릅니다.
 
+## SEO 유지보수
+
+사이트의 공개 콘텐츠, 페이지 경로·언어, 이미지·프로필, 레이아웃, URL·배포 설정을 변경할 때는 SEO를 함께 검토·갱신합니다. 페이지별 title·description·canonical URL, `hreflang`, 구조화 데이터(JSON-LD), `robots.txt`, sitemap을 변경 범위에 맞게 유지합니다. 특허·논문은 `is_public: true`인 공개 문건만 공개 HTML과 검색 색인 대상에 포함합니다. 미공개 문건의 제목·번호·초록·링크는 공개 저장소와 렌더링 결과에 저장하지 않습니다. Google Search Console 검증과 sitemap 제출 상태도 배포 전 확인하며, SEO 기준 변경은 같은 작업에서 `doc/site-guide.md`에 반영합니다.
+
 ## 커밋과 Pull Request 지침
 
 커밋 이력이 없으므로 `Add experience timeline`, `Fix mobile navigation`처럼 짧은 명령형 제목을 사용합니다. 한 커밋에는 하나의 목적만 담습니다. Pull Request에는 변경 목적, 검증 명령과 결과, 관련 이슈를 기록하고, 사용자에게 보이는 디자인 변경에는 스크린샷을 첨부합니다.
+
+# Agent Rule
+## Harness
+- 작업시 AGENTS.md, README.md 등의 수정 사항이 발생하면 사용자에게 알리고 수정한다.
+- 저장해야 하는 메모리나 규칙의 양이 많은 경우 doc 내에 별도의 파일로 저장한다.

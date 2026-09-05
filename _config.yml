@@ -3,6 +3,19 @@ description: "Donghun Jeong's professional experience, projects, and research in
 lang: en
 url: "https://dounghun22.github.io"
 baseurl: ""
+logo: /assets/images/profile.png
+
+# Set the token from Google Search Console's HTML tag verification method when needed.
+# Use only the content value, not the complete meta tag.
+webmaster_verifications:
+  google: ""
+
+social:
+  name: Donghun Jeong
+  links:
+    - https://github.com/dounghun22
+    - https://www.linkedin.com/in/donghun-jeong-8b0068262
+    - https://scholar.google.com/citations?view_op=list_works&hl=en&user=s6U2-TMAAAAJ
 
 markdown: kramdown
 permalink: pretty

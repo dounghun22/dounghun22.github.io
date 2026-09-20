@@ -112,6 +112,30 @@ projects:
       - Analyzed simulator-extracted raw data with Python, NumPy, and Pandas.
 
 patents:
+  - title: CONTROLLER AND STORAGE DEVICE
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2026-04-10"
+    kr_number: KR 2025-02-12013
+    us_number: US 19/643819
+    contribution: 70% Contribution
+  - title: CONTROLLER AND STORAGE DEVICE
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2026-07-23"
+    kr_number: KR 2026-00-38545
+    us_number: US 19/752574
+    contribution: 20% Contribution
+  - title: CONTROLLER AND SEMICONDUCTOR DEVICE INCLUDING THE SAME
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2026-08-28"
+    kr_number: KR 2026-00-74183
+    us_number: US 19/790916
+    contribution: 16% Contribution
   - title: STORAGE DEVICE AND ELECTRONIC DEVICE INCLUSING THE SAME
     status: Unpublished
     is_public: false
@@ -129,13 +153,18 @@ patents:
     us_number: US 19/382262
     contribution: 70% Contribution
   - title: MEMORY SYSTEM AND OPERATING METHOD OF MEMORY SYSTEM
-    status: Unpublished
-    is_public: false
+    status: Published · Under Examination
+    is_public: true
     is_registered: false
     filing_date: "2025-12-12"
+    publication_date: "2026-09-17"
     kr_number: KR 10-2025-0032152
     us_number: US 19/417330
     contribution: 100% Contribution
+    publication_number: US 20260277807 A1
+    abstract: Uses virtual tag symbols with ECC encoding and decoding to check cached data and tag information for errors while reducing cache tag storage overhead. The cache stores data and parity symbols, and the controller generates virtual tags from main-memory location information and host access addresses.
+    link_label: Patsnap patent record
+    url: https://eureka.patsnap.com/patent/US20260277807A1
   - title: CONTROL DEVICE, DATA STORAGE DEVICE AND COMPUTING SYSTEM
     status: Unpublished
     is_public: false
@@ -144,7 +173,7 @@ patents:
     kr_number: KR 10-2025-0064294
     us_number: US 19/284012
     contribution: 100% Contribution
-  - title: CONTROL DEVICE, MEMORY DEVICE AND DATA STORAGE DEVICE
+  - title: CONTROLLER, MEMORY DEVICE AND DATA STORAGE DEVICE
     status: Published · Under Examination
     is_public: true
     is_registered: false
@@ -153,9 +182,10 @@ patents:
     kr_number: KR 10-2024-0169278
     us_number: US 19/097420
     contribution: 60% Contribution
+    publication_number: US 20260147708 A1
     abstract: A data storage device includes volatile and nonvolatile memory, providing caching by storing cache lines containing compressed user data and tag data in volatile memory. This avoids additional volatile-memory storage and accesses for caching and improves caching-operation performance.
-    link_label: Google Scholar record
-    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=s6U2-TMAAAAJ&citation_for_view=s6U2-TMAAAAJ:WF5omc3nYNoC
+    link_label: Justia patent record
+    url: https://patents.justia.com/patent/20260147708
   - title: CONTROL DEVICE, MEMORY DEVICE AND MEMORY SYSTEM
     status: Published · Under Examination
     is_public: true
@@ -180,7 +210,7 @@ patents:
     publication_number: US 20260037129 A1
     abstract: A memory system receives data from at least one memory device in response to a speculative read request, stores the data in a read buffer using residual-time information, and outputs data linked to a subsequent host read request.
     url: https://patents.google.com/patent/US20260037129A1/en
-  - title: CONTROL DEVICE AND MEMORY SYSTEM
+  - title: CONTROL DEVICE AND MEMORY SYSTEM FOR MANAGING STORAGE REGION EFFECTIVELY
     status: US Granted
     is_public: true
     is_registered: true
@@ -193,24 +223,27 @@ patents:
     contribution: 80% Contribution
     publication_number: US 12,704,958 B2 · US 20260003499 A1
     abstract: Manages free physical storage regions by adding a free buffer to a service queue that handles allocation and return requests, reducing memory-access delay and improving memory-operation performance.
-    link_label: Justia patent record
-    url: https://patents.justia.com/patent/12704958
+    link_label: USPTO patent record
+    url: https://patentsgazette.uspto.gov/week32/OG/html/1549-2/US12704958-20260811.html
   - title: CONTROLLER, MEMORY DEVICE AND MEMORY SYSTEM
     status: Published · Under Examination
     is_public: true
     is_registered: false
     filing_date: "2024-10-23"
+    publication_date: "2025-12-18"
     kr_number: KR 10-2024-0077985
     us_number: US 18/924,855
     contribution: 10% Contribution
     publication_number: US 20250383961 A1
     abstract: Processes command data by operating at least two memory banks. Distributing bank operations reduces the number of bits provided by a bank with an error, enabling correction with smaller parity.
+    link_label: Google Patents
     url: https://patents.google.com/patent/US20250383961A1/en
   - title: METHOD AND APPARATUS FOR MANAGING VIRTUAL MEMORY IN HETEROGENEOUS SYSTEM, AND STORAGE MEDIUM STORING INSTRUCTIONS TO PERFORM METHOD FOR MANAGING VIRTUAL MEMORY
     status: KR Granted · US Under Examination
     is_public: true
     is_registered: true
     filing_date: "2023-12-05"
+    publication_date: "2024-06-06"
     registration_date: "2025-12-18"
     kr_number: KR 10-2899852
     us_number: US 18/529,534 (filing)

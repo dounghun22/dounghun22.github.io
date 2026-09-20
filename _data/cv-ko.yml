@@ -112,6 +112,30 @@ projects:
       - Python, NumPy, Pandas를 활용한 시뮬레이터 추출 원시 데이터 분석
 
 patents:
+  - title: 컨트롤러 및 저장 장치
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2026-04-10"
+    kr_number: KR 2025-02-12013
+    us_number: US 19/643819
+    contribution: 기여도 70%
+  - title: 컨트롤러 및 저장 장치
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2026-07-23"
+    kr_number: KR 2026-00-38545
+    us_number: US 19/752574
+    contribution: 기여도 20%
+  - title: 컨트롤러 및 이를 포함하는 반도체 장치
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2026-08-28"
+    kr_number: KR 2026-00-74183
+    us_number: US 19/790916
+    contribution: 기여도 16%
   - title: 저장 장치 및 이를 포함하는 전자 장치
     status: 미공개
     is_public: false
@@ -129,13 +153,18 @@ patents:
     us_number: US 19/382262
     contribution: 기여도 70%
   - title: 메모리 시스템 및 메모리 시스템의 동작 방법
-    status: 미공개
-    is_public: false
+    status: 공개 · 심사 중
+    is_public: true
     is_registered: false
     filing_date: "2025-12-12"
+    publication_date: "2026-09-17"
     kr_number: KR 10-2025-0032152
     us_number: US 19/417330
     contribution: 기여도 100%
+    publication_number: US 20260277807 A1
+    abstract: 가상 태그 심볼을 ECC 인코딩·디코딩에 사용해 캐시 데이터와 태그 정보의 오류를 검사하면서 캐시 태그 저장 오버헤드를 줄인다. 캐시에는 데이터와 패리티 심볼을 저장하고, 컨트롤러는 주 메모리의 위치 정보와 호스트 접근 주소로 가상 태그를 생성한다.
+    link_label: Patsnap 특허 기록
+    url: https://eureka.patsnap.com/patent/US20260277807A1
   - title: 제어 장치, 데이터 저장 장치 및 컴퓨팅 시스템
     status: 미공개
     is_public: false
@@ -144,7 +173,7 @@ patents:
     kr_number: KR 10-2025-0064294
     us_number: US 19/284012
     contribution: 기여도 100%
-  - title: 제어 장치, 메모리 장치 및 데이터 저장 장치
+  - title: 컨트롤러, 메모리 장치 및 데이터 저장 장치
     status: 공개 · 심사 중
     is_public: true
     is_registered: false
@@ -153,9 +182,10 @@ patents:
     kr_number: KR 10-2024-0169278
     us_number: US 19/097420
     contribution: 기여도 60%
+    publication_number: US 20260147708 A1
     abstract: 데이터 저장 장치는 휘발성 메모리와 비휘발성 메모리를 포함하며, 압축된 사용자 데이터와 태그 데이터를 포함하는 캐시 라인을 휘발성 메모리에 저장해 캐싱 기능을 제공합니다. 이를 통해 캐싱을 위한 추가 휘발성 메모리 저장 공간과 접근을 줄여 캐싱 연산 성능을 향상합니다.
-    link_label: Google Scholar 기록
-    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=s6U2-TMAAAAJ&citation_for_view=s6U2-TMAAAAJ:WF5omc3nYNoC
+    link_label: Justia 특허 기록
+    url: https://patents.justia.com/patent/20260147708
   - title: 제어 장치, 메모리 장치 및 메모리 시스템
     status: 공개 · 심사 중
     is_public: true
@@ -180,7 +210,7 @@ patents:
     publication_number: US 20260037129 A1
     abstract: 메모리 시스템은 추측적 읽기 요청에 따라 적어도 하나의 메모리 장치에서 출력된 데이터를 수신하고, 잔여 시간 정보를 이용해 읽기 버퍼에 저장한 뒤 이후 호스트 읽기 요청에 연결된 데이터를 출력합니다.
     url: https://patents.google.com/patent/US20260037129A1/en
-  - title: 제어 장치 및 메모리 시스템
+  - title: 저장 영역을 효율적으로 관리하기 위한 제어 장치 및 메모리 시스템
     status: 미국 등록
     is_public: true
     is_registered: true
@@ -193,24 +223,27 @@ patents:
     contribution: 기여도 80%
     publication_number: US 12,704,958 B2 · US 20260003499 A1
     abstract: 할당·반환 요청을 처리하는 service queue에 free buffer를 추가해 여유 물리 저장 영역을 관리하고, 메모리 접근 지연을 줄여 메모리 동작 성능을 향상합니다.
-    link_label: Justia 특허 기록
-    url: https://patents.justia.com/patent/12704958
+    link_label: USPTO 특허 기록
+    url: https://patentsgazette.uspto.gov/week32/OG/html/1549-2/US12704958-20260811.html
   - title: 컨트롤러, 메모리 장치 및 메모리 시스템
     status: 공개 · 심사 중
     is_public: true
     is_registered: false
     filing_date: "2024-10-23"
+    publication_date: "2025-12-18"
     kr_number: KR 10-2024-0077985
     us_number: US 18/924,855
     contribution: 기여도 10%
     publication_number: US 20250383961 A1
     abstract: 명령에 대응하는 데이터를 처리할 때 두 개 이상의 메모리 뱅크를 동작시켜 뱅크 동작을 분산하고, 오류 발생 뱅크가 제공하는 데이터 비트를 줄여 더 작은 패리티로 오류를 정정합니다.
+    link_label: Google 특허
     url: https://patents.google.com/patent/US20250383961A1/en
   - title: 이기종 시스템의 가상 메모리 관리 방법 및 장치와 이를 수행하기 위한 명령어를 저장하는 저장 매체
     status: 한국 등록 · 미국 심사 중
     is_public: true
     is_registered: true
     filing_date: "2023-12-05"
+    publication_date: "2024-06-06"
     registration_date: "2025-12-18"
     kr_number: KR 10-2899852
     us_number: US 18/529,534 (출원)

@@ -223,8 +223,8 @@ patents:
     contribution: 80% Contribution
     publication_number: US 12,704,958 B2 · US 20260003499 A1
     abstract: Manages free physical storage regions by adding a free buffer to a service queue that handles allocation and return requests, reducing memory-access delay and improving memory-operation performance.
-    link_label: USPTO patent record
-    url: https://patentsgazette.uspto.gov/week32/OG/html/1549-2/US12704958-20260811.html
+    link_label: Google Patents (published application)
+    url: https://patents.google.com/patent/US20260003499A1/en
   - title: CONTROLLER, MEMORY DEVICE AND MEMORY SYSTEM
     status: Published · Under Examination
     is_public: true

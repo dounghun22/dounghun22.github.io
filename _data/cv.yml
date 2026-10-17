@@ -251,6 +251,13 @@ patents:
     publication_number: KR 10-2899852 B1 · US 20240184713 A1
     abstract: In response to a page-access request in a heterogeneous system, determines a physical address in device memory and, when it indicates system memory, uses an inverted page table in device memory to generate a migration-destination frame identification and perform page migration to system memory.
     url: https://patents.google.com/patent/KR102899852B1/en
+  - title: APPARATUS AND OPERATING METHOD FOR FREE BLOCK MANAGEMENT IN A MEMORY SYSTEM
+    status: Unpublished
+    is_public: false
+    is_registered: false
+    filing_date: "2026-09-21"
+    us_number: US 19/813260
+    contribution: 100% Contribution
 
 papers:
   - title: "A New NB-LDPC Code Construction Method With Arbitrary Generalized Girth"

@@ -86,7 +86,7 @@
 1. `is_registered: true`인 등록 특허를 `registration_date` 내림차순으로 표시합니다.
 2. 이어서 `is_registered: false`인 미등록 특허를 `filing_date` 내림차순으로 표시합니다.
 
-각 특허에는 `title`, `status`, `is_public`, `is_registered`, `filing_date`, `kr_number`, `us_number`, `contribution`을 입력합니다. `filing_date`는 미국 출원이 있으면 미국 출원일을 사용하고, 없으면 해당 특허의 다른 국가 출원일을 사용합니다. 등록 특허에는 `registration_date`를 반드시 추가합니다. `publication_date`와 `publication_number`는 값이 있을 때만 표시합니다.
+각 특허에는 `title`, `status`, `is_public`, `is_registered`, `filing_date`, `us_number`, `contribution`을 입력합니다. `kr_number`는 확인된 값이 있을 때 추가하고, 없거나 빈 문자열이면 해당 행을 표시하지 않습니다. 사용자가 직접 제공한 미공개 출원은 제공된 제목·출원일·출원번호·기여도로 추가할 수 있으며, 미제공 번호를 추정하지 않습니다. `filing_date`는 미국 출원이 있으면 미국 출원일을 사용하고, 없으면 해당 특허의 다른 국가 출원일을 사용합니다. 등록 특허에는 `registration_date`를 반드시 추가합니다. `publication_date`와 `publication_number`는 값이 있을 때만 표시합니다.
 
 `is_public: true`이면 `abstract`를 제공하여 초록을 표시합니다. 공개 레코드 URL이 있으면 `url`을 추가하며, `link_label`로 링크 라벨을 바꿀 수 있습니다. `is_public: false`이면 초록 대신 **Unpublished**만 보이며, `url`이 있어도 링크는 표시되지 않습니다. 미공개 특허에는 비공개 설명이나 문서 URL을 추가하지 않습니다.
 

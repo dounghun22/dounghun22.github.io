@@ -129,7 +129,7 @@
             <div><dt>{{ t.status }}</dt><dd>{{ patent.status }}</dd></div>
             <div><dt>{% if patent.registration_date %}{{ patent.registration_date_label | default: t.registration_date }}{% else %}{{ t.filing_date }}{% endif %}</dt><dd>{{ patent.registration_date | default: patent.filing_date }}</dd></div>
             {% if patent.publication_date %}<div><dt>{{ t.publication_date }}</dt><dd>{{ patent.publication_date }}</dd></div>{% endif %}
-            <div><dt>KR</dt><dd>{{ patent.kr_number }}</dd></div>
+            {% if patent.kr_number and patent.kr_number != empty %}<div><dt>KR</dt><dd>{{ patent.kr_number }}</dd></div>{% endif %}
             <div><dt>US</dt><dd>{{ patent.us_number }}</dd></div>
             {% if patent.publication_number %}<div><dt>{{ t.publication }}</dt><dd>{{ patent.publication_number }}</dd></div>{% endif %}
             <div><dt>{{ t.contribution }}</dt><dd>{{ patent.contribution }}</dd></div>

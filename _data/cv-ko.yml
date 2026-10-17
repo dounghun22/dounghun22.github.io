@@ -251,6 +251,13 @@ patents:
     publication_number: KR 10-2899852 B1 · US 20240184713 A1
     abstract: 이기종 시스템의 페이지 접근 요청에 대해 디바이스 메모리의 물리 주소를 결정하고, 해당 주소가 시스템 메모리에 할당된 경우 디바이스 메모리에 저장된 inverted page table로 마이그레이션 목적지의 frame identification을 생성해 시스템 메모리로 페이지를 마이그레이션합니다.
     url: https://patents.google.com/patent/KR102899852B1/en
+  - title: 메모리 시스템의 여유 블록 관리를 위한 장치 및 동작 방법
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2026-09-21"
+    us_number: US 19/813260
+    contribution: 기여도 100%
 
 papers:
   - title: "임의의 일반화된 girth를 갖는 새로운 NB-LDPC 코드 구성 방법"

@@ -256,8 +256,19 @@ patents:
     is_public: false
     is_registered: false
     filing_date: "2026-09-21"
+    kr_filing_date: "2026-04-28"
+    kr_number: KR 10-2026-0076607
     us_number: US 19/813260
     contribution: 기여도 100%
+  - title: 메모리 시스템 및 그 동작 방법
+    status: 미공개
+    is_public: false
+    is_registered: false
+    filing_date: "2026-10-07"
+    kr_filing_date: "2026-05-15"
+    kr_number: KR 10-2026-0088054
+    us_number: US 19/832473
+    contribution: 기여도 80%
 
 papers:
   - title: "임의의 일반화된 girth를 갖는 새로운 NB-LDPC 코드 구성 방법"

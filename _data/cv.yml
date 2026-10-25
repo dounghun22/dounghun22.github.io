@@ -226,17 +226,18 @@ patents:
     link_label: Google Patents (published application)
     url: https://patents.google.com/patent/US20260003499A1/en
   - title: CONTROLLER, MEMORY DEVICE AND MEMORY SYSTEM
-    status: Published · Under Examination
+    status: US Granted
     is_public: true
-    is_registered: false
+    is_registered: true
     filing_date: "2024-10-23"
     publication_date: "2025-12-18"
+    registration_date: "2026-10-20"
     kr_number: KR 10-2024-0077985
-    us_number: US 18/924,855
+    us_number: US 12,769,611 (granted) · US 18/924,855 (application)
     contribution: 10% Contribution
-    publication_number: US 20250383961 A1
+    publication_number: US 12,769,611 B2 · US 20250383961 A1
     abstract: Processes command data by operating at least two memory banks. Distributing bank operations reduces the number of bits provided by a bank with an error, enabling correction with smaller parity.
-    link_label: Google Patents
+    link_label: Google Patents (published application)
     url: https://patents.google.com/patent/US20250383961A1/en
   - title: METHOD AND APPARATUS FOR MANAGING VIRTUAL MEMORY IN HETEROGENEOUS SYSTEM, AND STORAGE MEDIUM STORING INSTRUCTIONS TO PERFORM METHOD FOR MANAGING VIRTUAL MEMORY
     status: KR Granted · US Under Examination

@@ -226,17 +226,18 @@ patents:
     link_label: Google 특허 (공개 출원)
     url: https://patents.google.com/patent/US20260003499A1/en
   - title: 컨트롤러, 메모리 장치 및 메모리 시스템
-    status: 공개 · 심사 중
+    status: 미국 등록
     is_public: true
-    is_registered: false
+    is_registered: true
     filing_date: "2024-10-23"
     publication_date: "2025-12-18"
+    registration_date: "2026-10-20"
     kr_number: KR 10-2024-0077985
-    us_number: US 18/924,855
+    us_number: US 12,769,611 (등록) · US 18/924,855 (출원)
     contribution: 기여도 10%
-    publication_number: US 20250383961 A1
+    publication_number: US 12,769,611 B2 · US 20250383961 A1
     abstract: 명령에 대응하는 데이터를 처리할 때 두 개 이상의 메모리 뱅크를 동작시켜 뱅크 동작을 분산하고, 오류 발생 뱅크가 제공하는 데이터 비트를 줄여 더 작은 패리티로 오류를 정정합니다.
-    link_label: Google 특허
+    link_label: Google 특허 (공개 출원)
     url: https://patents.google.com/patent/US20250383961A1/en
   - title: 이기종 시스템의 가상 메모리 관리 방법 및 장치와 이를 수행하기 위한 명령어를 저장하는 저장 매체
     status: 한국 등록 · 미국 심사 중

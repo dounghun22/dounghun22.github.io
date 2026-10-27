@@ -184,8 +184,8 @@ patents:
     contribution: 60% Contribution
     publication_number: US 20260147708 A1
     abstract: A data storage device includes volatile and nonvolatile memory, providing caching by storing cache lines containing compressed user data and tag data in volatile memory. This avoids additional volatile-memory storage and accesses for caching and improves caching-operation performance.
-    link_label: Justia patent record
-    url: https://patents.justia.com/patent/20260147708
+    link_label: Google Patents
+    url: https://patents.google.com/patent/US20260147708A1/en
   - title: CONTROL DEVICE, MEMORY DEVICE AND MEMORY SYSTEM
     status: Published · Under Examination
     is_public: true
@@ -223,8 +223,8 @@ patents:
     contribution: 80% Contribution
     publication_number: US 12,704,958 B2 · US 20260003499 A1
     abstract: Manages free physical storage regions by adding a free buffer to a service queue that handles allocation and return requests, reducing memory-access delay and improving memory-operation performance.
-    link_label: Google Patents (published application)
-    url: https://patents.google.com/patent/US20260003499A1/en
+    link_label: Google Patents
+    url: https://patents.google.com/patent/US12704958B2/en
   - title: CONTROLLER, MEMORY DEVICE AND MEMORY SYSTEM
     status: US Granted
     is_public: true
